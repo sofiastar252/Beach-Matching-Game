@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ADD8E6;
+    /* Light Blue Background */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: #4682B4;
+    /* Steel Blue Color for Beach Theme */
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card .front,
+.card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .front {
+    background-color: #e6a535;
+    /* Khaki Color */
+}
+
+.card .back {
+    background-color: #F0E68C;
+    transform: rotateY(180deg);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+}
+
+.card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(360deg);
+}
+
+.restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4682B4;
+    /* Steel Blue */
+    color: #fff;
+    cursor: pointer;
+}
+
+.restart:hover {
+    background-color: #4169E1;
+    /* Royal Blue */
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #4682B4;
+    /* Steel Blue */
+}
